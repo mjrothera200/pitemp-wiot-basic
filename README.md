@@ -7,6 +7,20 @@ The goal of this project is to provide a very simple method of getting started w
 **Special thanks for the code already included in this repository that helps read the sensor values from the DHT11**
 https://github.com/szazo/DHT11_Python.git
 
+Raspberry PI Dependencies
+
+1.  Python 3
+
+```console
+python3 --version
+```
+
+2.  There may be packages you need to install:
+
+```console
+sudo pip3 install paho-mqtt
+```
+
 ## Step 1:  Wire the DHT 11 Sensor to your PI
 
 Follow the instructions here:
@@ -24,7 +38,7 @@ Some hints:
 Run the following command to verify that you are receiving values:
 
 ```console
-python dht11_example.py
+python3 dht11_example.py
 ```
 
 Verify that the temperature and humidity readings are displayed.
@@ -62,11 +76,13 @@ https://www.ibm.com/cloud
 ## Step 6:  Customize your Configuration Values in the Python Script
 
 1.  Edit the program and put it in your specific credentials.  
+    * The path to the cert. This must be an absolute path - where you are running this program on the PI
     * Your organization:  The 6 character identification
     * The device token if different than 12345678
 
 ```python
 # device credentials
+ca_absolute_path = '/home/pi/dev/iot-temp/pitemp-wiot-basic/messaging.pem'
 iotidentifier = 'pi1'
 iotorg = 'cg3orm'
 iottype = 'pitemp'
@@ -80,7 +96,7 @@ random_client_id = 'd:'+iotorg+':'+iottype+':'+iotidentifier      # * set a rand
  
 
 ```console
-python iot-temp.py
+python3 iot-temp.py
 ```
 
 ## Step 8:  Monitor Results in Watson IoT

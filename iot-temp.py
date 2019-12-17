@@ -17,6 +17,7 @@ GPIO.setmode(GPIO.BCM)
 instance = dht11.DHT11(pin=17)
 
 # device credentials
+ca_absolute_path = '/home/pi/dev/iot-temp/pitemp-wiot-basic/messaging.pem'
 iotidentifier = 'pi1'
 iotorg = 'cg3orm'
 iottype = 'pitemp'
@@ -80,13 +81,13 @@ client.on_subscribe = on_subscribe
 
 # client connection
 client.username_pw_set(device_id, device_secret)  # MQTT server credentials
-client.tls_set(ca_certs="/home/pi/dev/iot-temp/watsoniot-basic/messaging.pem", certfile=None, keyfile=None, cert_reqs=ssl.CERT_REQUIRED, tls_version=ssl.PROTOCOL_TLSv1_2)
+client.tls_set(ca_certs=ca_absolute_path, certfile=None, keyfile=None, cert_reqs=ssl.CERT_REQUIRED, tls_version=ssl.PROTOCOL_TLSv1_2)
 
 try:
     client.connect(iotorg+".messaging.internetofthings.ibmcloud.com", port=8883)                   # MQTT server address
     client.subscribe(in_topic_snapshot, 0)                     # MQTT subscribtion (with QoS level 0)
 except:
-    print 'could not connect'
+    print('could not connect')
     
 
 client.loop_start()
