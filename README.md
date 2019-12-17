@@ -13,9 +13,9 @@ https://www.instructables.com/id/DHT11-Raspberry-Pi/
 Some hints:
 1.  You can do this with simply the DHT11 and 3 Female to Female jumper wires
 2.  If you hold the raspberry pi such that the USB inputs are on the right and the Pins are on the top:
-	a.  Wire the first pin on the bottom row to the VCC of the DHT11 - This is 3.3V power
-	b.  Wire the second pin on the top row to the ground (GND) of the DHT11 - this is the ground 
-	c.  Wire the third pin on the 6th pin on the bottom row to the DATA of the DHT11 - this is GPIO Pin 17
+    * Wire the first pin on the bottom row to the VCC of the DHT11 - This is 3.3V power
+    * Wire the second pin on the top row to the ground (GND) of the DHT11 - this is the ground 
+    * Wire the third pin on the 6th pin on the bottom row to the DATA of the DHT11 - this is GPIO Pin 17
 
 # Step 2:  Verify the DHT 11 is working properly
 
@@ -26,6 +26,15 @@ python dht11_example.py
 ```
 
 Verify that the temperature and humidity readings are displayed.
+
+
+```console
+Last valid input: 2019-12-17 10:33:59.947765
+Temperature: 18.3 C
+Temperature: 64.9 F
+Humidity: 39.0 %
+```
+
 
 # Step 3:  Sign up for IBM Cloud and Create an IoT Service
 
