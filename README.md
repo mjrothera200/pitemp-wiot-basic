@@ -92,6 +92,6 @@ Enjoy!
 Matt Rothera
 
 
-#License
+## License
 
 This project is licensed under the terms of the MIT license.
