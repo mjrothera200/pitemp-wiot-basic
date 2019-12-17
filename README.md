@@ -11,9 +11,10 @@ https://github.com/szazo/DHT11_Python.git
 
 Run the following command to verify that you are receiving values:
 
-'''console
+```console
 python dht1_example.py
-'''
+```
+
 
 
 
