@@ -1,37 +1,22 @@
-# DHT11 Python library
+# Raspberry PI Temperature with Watson IoT - Basic MQTT 
 
-This simple class can be used for reading temperature and humidity values from DHT11 sensor on Raspberry Pi.
+The goal of this project is to provide a very simple method of getting started with Watson IoT and an MQTT client using a real sensor.  I have selected a DHT11 Temperature and Humidity sensor given the simplicity of how to wire the solution.  Please follow the instructions to wire your DHT11 Temperature Sensor here:
 
-# Usage
+https://www.instructables.com/id/DHT11-Raspberry-Pi/
 
-1. Instantiate the `DHT11` class with the pin number as constructor parameter.
-2. Call `read()` method, which will return `DHT11Result` object with actual values and error code.
+Special thanks for the code already included in this repository that helps read the sensor values from the DHT11:
+https://github.com/szazo/DHT11_Python.git
 
-For example:
+# Step 1:  Verify the DHT 11 is working properly
 
-```python
-import RPi.GPIO as GPIO
-import dht11
+Run the following command to verify that you are receiving values:
 
-# initialize GPIO
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BCM)
-GPIO.cleanup()
-
-# read data using pin 14
-instance = dht11.DHT11(pin = 14)
-result = instance.read()
-
-if result.is_valid():
-    print("Temperature: %-3.1f C" % result.temperature)
-    print("Humidity: %-3.1f %%" % result.humidity)
-else:
-    print("Error: %d" % result.error_code)
-```
-
-For working example, see `dht11_example.py` (you probably need to adjust pin for your configuration)
+'''console
+python dht1_example.py
+'''
 
 
-# License
+
+#License
 
 This project is licensed under the terms of the MIT license.
