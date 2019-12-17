@@ -1,6 +1,8 @@
 # Raspberry PI Temperature with Watson IoT - Basic MQTT 
 
-The goal of this project is to provide a very simple method of getting started with Watson IoT and an MQTT client using a real sensor.  I have selected a DHT11 Temperature and Humidity sensor given the simplicity of how to wire the solution.  Please follow the instructions to wire your DHT11 Temperature Sensor here:
+The goal of this project is to provide a very simple method of getting started with Watson IoT and an MQTT client using a real sensor.  I have selected a DHT11 Temperature and Humidity sensor given the simplicity of how to wire the solution.  
+
+**This is not meant to be an all-inclusive tutorial to Watson IoT connectivity, but a simple "getting started".  To learn aout the platform and other options for connectivity, please refer to the Watson IoT documentation**
 
 **Special thanks for the code already included in this repository that helps read the sensor values from the DHT11**
 https://github.com/szazo/DHT11_Python.git
